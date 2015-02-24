@@ -1,6 +1,7 @@
 ﻿<!doctype HTML>
 <html class="no-js">
 <head>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <title><?php print $head_title; ?></title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width,user-scalable=no" />
