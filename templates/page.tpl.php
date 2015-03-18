@@ -28,14 +28,14 @@
 				<a href="<?php print $front_page; ?>" title="<?php print $site_name; ?> home"><img src="<?php print $logo; ?>" alt="<?php print $site_name; ?> logo"></a>
 			</div>
 			<div class="user-action pull-right hidden-xs">
-				<a type="button" class="btn btn-default no-js" data-toggle="modal" href="#modalsearch">Search <span class="glyphicon glyphicon-search"></span></a>
+				<a class="btn btn-default no-js" data-toggle="modal" href="#modalsearch">Search <span class="glyphicon glyphicon-search"></span></a>
         <?php if ($logged_in) { ?>
-          <?php if ($is_admin) ?><a type="button" class="btn btn-primary" href="/admin">Admin <span class="glyphicon glyphicon-wrench"></span></a>
-        <a type="button" class="btn btn-primary" href="/user">My profile <span class="glyphicon glyphicon-user"></span></a>
-				<a type="button" class="btn btn-primary" href="/logout">Logout <span class="glyphicon glyphicon-log-out"></span></a>
+          <?php if ($is_admin) ?><a class="btn btn-primary" href="/admin">Admin <span class="glyphicon glyphicon-wrench"></span></a>
+        <a class="btn btn-primary" href="/user">My profile <span class="glyphicon glyphicon-user"></span></a>
+				<a class="btn btn-primary" href="/logout">Logout <span class="glyphicon glyphicon-log-out"></span></a>
         <?php } else { ?>
-				<a type="button" class="btn btn-primary" href="/user/login">Login <span class="glyphicon glyphicon-log-in"></span></a>
-				<a type="button" class="btn btn-primary" href="/user/register">Register <span class="glyphicon glyphicon-tasks"></span></a>
+				<a class="btn btn-primary" href="/user/login">Login <span class="glyphicon glyphicon-log-in"></span></a>
+				<a class="btn btn-primary" href="/user/register">Register <span class="glyphicon glyphicon-tasks"></span></a>
         <?php } ?>
 			</div>
       <?php if(!empty($company_phone) || !empty($site_mail)) { ?>
@@ -71,14 +71,14 @@
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <div class="visible-xs navbar-utilities">
-            <a type="button" class="btn btn-default no-js" data-toggle="modal" href="#modalsearch"><span class="glyphicon glyphicon-search"></span><span class="sr-only">Search</span></a>
+            <a class="btn btn-default no-js" data-toggle="modal" href="#modalsearch"><span class="glyphicon glyphicon-search"></span><span class="sr-only">Search</span></a>
             <?php if ($logged_in) { ?>
-              <?php if ($is_admin) ?><a type="button" class="btn btn-default" href="/admin">Admin</a>
-            <a type="button" class="btn btn-default" href="/user">Profile</span></a>
-            <a type="button" class="btn btn-default" href="/logout">Logout</span></a>
+              <?php if ($is_admin) ?><a class="btn btn-default" href="/admin">Admin</a>
+            <a class="btn btn-default" href="/user">Profile</span></a>
+            <a class="btn btn-default" href="/logout">Logout</span></a>
             <?php } else { ?>
-            <a type="button" class="btn btn-default" href="/user/login">Login</a>
-            <a type="button" class="btn btn-default" href="/user/register">Register</a>
+            <a class="btn btn-default" href="/user/login">Login</a>
+            <a class="btn btn-default" href="/user/register">Register</a>
             <?php } ?>
           </div>
           <?php print theme('links', $primary_links, array('class' => 'primary-links'), 'primary-links'); ?>          
@@ -155,7 +155,7 @@
       <?php } ?>
       
       <?php if ($left) { ?>
-			<aside id="sidebar-left" role="navigation"<?php print $css_left; ?>>
+			<aside id="sidebar-left" <?php print $css_left; ?>>
 				<?php print $left; ?>
 			</aside>
       <?php } ?>
@@ -194,7 +194,7 @@
   <?php print $modal; ?>
   
   <!-- Modal Search -->
-  <div class="modal fade" id="modalsearch" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal fade" id="modalsearch" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
